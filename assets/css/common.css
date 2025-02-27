@@ -1,0 +1,40 @@
+@import url("style.css");
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KCC-Sonkeechung';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KCC-Sonkeechung.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+*{
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Pretendard", sans-serif;
+}
+html, body, h1, h2, h3, h4, p{
+    margin: 0;
+  }
+
+ul, li, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+img{
+    border: none;
+    vertical-align: top;
+}
+  
