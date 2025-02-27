@@ -106,7 +106,7 @@
     border-radius: 50px;
     font-size: 35px;
     line-height: 32px;
-    margin: 5px 30px;
+    margin: 20px 30px 5px 30px;
     font-weight: 300;
     animation: cover3 5s forwards;
 }
@@ -382,3 +382,17 @@
     margin-left: 2.5px;
 }
 
+/*container04*/
+.container04{
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    padding: 10em 12em;
+    white-space: nowrap;
+}
+.container04 .title-text{
+    font-size: 96px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: -1px;
+}
