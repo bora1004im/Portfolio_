@@ -434,12 +434,27 @@
     overflow-x: hidden;
     padding: 10em 12em;
     white-space: nowrap;
+    text-align: center;
 }
 .container04 .title-text{
     font-size: 96px;
     font-weight: 900;
     text-align: center;
     letter-spacing: -1px;
+}
+.container04>p{
+    font-family: 'KCC-Sonkeechung';
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container04 .contents{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container04 .contents div{
+    width: 200px;
 }
 
 /* 태블릿 (1024px 이하) */
