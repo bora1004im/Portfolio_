@@ -128,3 +128,17 @@ document.querySelectorAll(".skill-text li").forEach((item) => {
         this.classList.add("active");
     });
 });
+
+/*셀리턴 모바일 크기로 열리기*/
+function openMobileWindow() {
+    // 모바일 창 크기 설정 (예: 375px x 667px)
+    var mobileWidth = 375;
+    var mobileHeight = 667;
+    var left = (window.innerWidth / 2) - (mobileWidth / 2); // 화면 중앙에 열기
+    var top = (window.innerHeight / 2) - (mobileHeight / 2); // 화면 중앙에 열기
+
+    // 새로운 창 열기 (URL, 타겟, 창 크기 설정)
+    window.open("https://bora1004im.github.io/CELLRTURN/", "_blank", 
+                "width=" + mobileWidth + ", height=" + mobileHeight + 
+                ", top=" + top + ", left=" + left + ", resizable=yes, scrollbars=yes");
+}
