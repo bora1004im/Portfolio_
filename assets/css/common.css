@@ -37,4 +37,11 @@ img{
     border: none;
     vertical-align: top;
 }
-  
+::selection {
+    background: black; 
+    color: white;
+}
+
+.element {
+    cursor: default;
+}

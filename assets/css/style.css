@@ -1,3 +1,4 @@
+/*pc*/
 /*container01*/
 .container01 {
     width: 100%;
@@ -24,12 +25,13 @@
 .container01 .circle.small {
     width: 230px;
     height: 230px;
-    left: 7%;
-    top: 8%;
+    left: 4%;
+    top: 6%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.7) 70%);
+    background: radial-gradient(circle, rgb(255 255 255 / 30%) 0%, rgba(0, 0, 0, 0.7) 70%);
     filter: blur(10px);
     transition: transform 0.1s ease-out;
+    animation: circleAnimation1 3s infinite ease-in-out;
 }
 .container01 .circle.large {
     width: 450px;
@@ -38,10 +40,47 @@
     right: 2%;
     bottom: 6%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.7) 70%);
+    background: radial-gradient(circle, rgb(255 255 255 / 20%) 0%, rgba(0, 0, 0, 0.7) 70%);
     filter: blur(10px);
     transition: transform 0.1s ease-out;
+    animation: circleAnimation2 3s infinite ease-in-out;
 }
+@keyframes circleAnimation1 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.8;
+        filter: blur(8px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+        opacity: 1;
+        filter: blur(5px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.8;
+        filter: blur(8px);
+    }
+}
+
+@keyframes circleAnimation2 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.8;
+        filter: blur(8px);
+    }
+    50% {
+        transform: translate(30px, -30px);
+        opacity: 1;
+        filter: blur(5px);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.8;
+        filter: blur(8px);
+    }
+}
+
 .container01 .contents{
     width: 80vw;
     margin: 0 auto;
@@ -182,6 +221,7 @@
     }
 }
 .container02 .contents .text-all{
+    position: relative;
     display: flex;
     margin: 5em 0;
     padding: 3em 5em;
@@ -204,6 +244,11 @@
     line-height: 24px;
     letter-spacing: -.5px;
 }
+/* .container02 .contents .text-all p:nth-of-type(3){
+    position: absolute;
+    left: 73%;
+    top: 20%;
+} */
 .container02 .contents .text-all p:nth-of-type(2) b{
     font-weight: 700;
 }
@@ -395,4 +440,121 @@
     font-weight: 900;
     text-align: center;
     letter-spacing: -1px;
+}
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .container01 .title-text {
+        font-size: 16px;
+    }
+    .container01 .title .highlight {
+        font-size: 120px;
+    }
+    .container02 .title-text,
+    .container03 .title-text,
+    .container04 .title-text {
+        font-size: 72px;
+    }
+    .container02,
+    .container04 {
+        padding: 8em 6em;
+    }
+    .container02 .contents .contents-text {
+        flex-direction: column;
+        text-align: center;
+    }
+    .container02 .contents .contents-text .right-text p {
+        font-size: 90px;
+    }
+    .container03 .contents {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .container01 .title .highlight {
+        font-size: 80px;
+    }
+    .container02 .title-text,
+    .container03 .title-text,
+    .container04 .title-text {
+        font-size: 48px;
+    }
+    .container02,
+    .container04 {
+        padding: 6em 2em;
+    }
+    .container02 .contents .contents-text .left-text p {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .container02 .contents .contents-text .right-text p {
+        font-size: 70px;
+    }
+    .container03 .contents {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container03 .contents .wrap-text {
+        padding: 1em;
+    }
+    .container03 .contents .wrap-text h2 {
+        font-size: 24px;
+    }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .container01 .title .highlight {
+        font-size: 60px;
+    }
+    .container02 .title-text,
+    .container03 .title-text,
+    .container04 .title-text {
+        font-size: 36px;
+    }
+    .container02 .contents .contents-text .left-text p {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .container02 .contents .contents-text .right-text p {
+        font-size: 50px;
+    }
+    .container03 .contents .wrap-text {
+        padding: 0.5em;
+    }
+    .container03 .contents .wrap-text h2 {
+        font-size: 20px;
+    }
+}
+.circle-text {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
